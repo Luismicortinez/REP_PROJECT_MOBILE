@@ -4,8 +4,11 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2025-03-11T20:16:31.024957700Z">
+        <DropdownSelection timestamp="2025-03-25T22:21:53.781385200Z">
           <Target type="DEFAULT_BOOT">
+            <handle>
+              <DeviceId pluginId="FirebaseDirectAccess" identifier="reservation=projects/holamundo-f317423d/deviceSessions/session-jdiuii0nhcqba" />
+            </handle>
             <template>
               <DeviceId pluginId="FirebaseDirectAccess" type="TEMPLATE" identifier="model_id=fogona/34" />
             </template>

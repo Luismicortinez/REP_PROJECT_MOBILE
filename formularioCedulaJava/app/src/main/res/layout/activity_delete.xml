@@ -2,9 +2,115 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#222222"
+    android:padding="16dp"
     tools:context=".DeleteActivity">
+
+    <TextView
+        android:id="@+id/txtTitulo"
+        android:text="RETIRO"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/txtDatosEstudiante"
+        android:text="Datos Estudiante"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtTitulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingBottom="5dp" />
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tableEstudiantes"
+        android:padding="10dp"
+        android:background="#424242"
+        app:layout_constraintTop_toBottomOf="@id/txtDatosEstudiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+            <TextView android:text="Documento:" android:textColor="#FFFFFF" />
+            <EditText android:id="@+id/etDocumento" android:hint="Ingrese documento" android:background="#757575" android:textColorHint="#BDBDBD" android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/btnEliminarEstudiante"
+                android:text="Eliminar"
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/txtDatosCatedra"
+        android:text="Datos Catedras"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tableEstudiantes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingTop="20dp" />
+
+    <TableLayout
+        android:id="@+id/tableCatedras"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#424242"
+        app:layout_constraintTop_toBottomOf="@id/txtDatosCatedra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+            <TextView android:text="Nombre:" android:textColor="#FFFFFF" />
+            <EditText android:id="@+id/etNombreCatedra" android:hint="Ingrese nombre" android:background="#757575" android:textColorHint="#BDBDBD" android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <TableRow>
+            <Button
+                android:id="@+id/btnEliminarCatedra"
+                android:text="Eliminar"
+                android:backgroundTint="#03A9F4"
+                android:textColor="#FFFFFF"
+                android:layout_marginTop="10dp"/>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/btnVolver"
+        android:text="Volver"
+        android:backgroundTint="#BDBDBD"
+        android:textColor="#000000"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tableCatedras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="20dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

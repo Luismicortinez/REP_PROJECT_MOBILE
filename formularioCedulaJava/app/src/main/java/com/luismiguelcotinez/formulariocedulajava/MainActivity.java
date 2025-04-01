@@ -16,12 +16,10 @@ import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText EdtDocumento;
     private TextView TxvData;
-    private Button BtnGuardar;
-    private Button BtnMostrar;
+    private Button BtnGuardar, btnConsutarID, BtnMostrar, BtnContacto, BtnRetirar, BtnModificar;
     protected  DBHandler dbhandler;
-    private Button BtnContacto;
+
 
 
     @Override
@@ -35,17 +33,23 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        EdtDocumento = findViewById(R.id.idEdtDocumento);
-        TxvData = findViewById(R.id.idTxvData);
         BtnGuardar = findViewById(R.id.idBtnGuardar);
-        BtnMostrar = findViewById(R.id.idBtnMostrar);
+        BtnMostrar = findViewById(R.id.idBtnConsult);
         BtnContacto = findViewById(R.id.idBtnContacto);
+        btnConsutarID = findViewById(R.id.idBtnConsult);
+        BtnRetirar = findViewById(R.id.idBtnEliminar);
+        BtnModificar = findViewById(R.id.idBtnModificar);
+
+
 
 
         dbhandler = new DBHandler(this);
         BtnGuardar.setOnClickListener(v -> Guardar());
         BtnMostrar.setOnClickListener(v -> Mostrar());
         BtnContacto.setOnClickListener(v -> Contacto());
+        btnConsutarID.setOnClickListener(v-> ConsultarID());
+        BtnModificar.setOnClickListener(v-> Modificar());
+        BtnRetirar.setOnClickListener(v-> Retirar());
 
     }
 
@@ -55,22 +59,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Guardar(){
-        String documento = EdtDocumento.getText().toString();
 
-        if (documento.isEmpty())
-        {
-            Message.message(this, "Campo Vacio");
-            return;
-        }
-        dbhandler.ingresar(documento);
-
-        Message.message(this, "Ingreso Exitoso");
+        Intent intent = new Intent(MainActivity.this, CreateActivity.class);
+        startActivity(intent);
     }
-
+    private void ConsultarID(){
+        Intent intent = new Intent(MainActivity.this, ReadActivity.class);
+        startActivity(intent);
+    }
     private void Mostrar(){
         String resultado = dbhandler.consultar();
         TxvData.setText(resultado);
         Message.message(this,resultado);
     }
-
+    private void Modificar(){
+        Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
+        startActivity(intent);
+    }
+    private void Retirar(){
+        Intent intent = new Intent(MainActivity.this, DeleteActivity.class);
+        startActivity(intent);
+    }
 }

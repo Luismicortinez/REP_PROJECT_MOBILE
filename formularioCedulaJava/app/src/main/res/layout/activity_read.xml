@@ -1,10 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:padding="20dp"
+    android:background="#212121"
     tools:context=".ReadActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:text="CONSULTA ID"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp" />
+
+    <TextView
+        android:text="Datos Estudiante"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#424242">
+
+        <TableRow>
+            <TextView
+                android:text="Documento:"
+                android:textColor="#FFFFFF" />
+            <EditText
+                android:id="@+id/etDocumento"
+                android:hint="Ingrese documento"
+                android:background="#757575"
+                android:textColorHint="#BDBDBD"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnConsultarE"
+            android:text="Consulta Id"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvEstudiantes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#333333"
+            android:textColor="#FFFFFF" />
+    </TableLayout>
+
+    <TextView
+        android:text="Datos Cátedra"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="#424242">
+
+        <TableRow>
+            <TextView
+                android:text="Nombre:"
+                android:textColor="#FFFFFF" />
+            <EditText
+                android:id="@+id/etCatedras"
+                android:hint="Ingrese nombre"
+                android:background="#757575"
+                android:textColorHint="#BDBDBD"
+                android:textColor="#FFFFFF" />
+        </TableRow>
+
+        <Button
+            android:id="@+id/btnConsultarC"
+            android:text="Consulta Id"
+            android:backgroundTint="#03A9F4"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/tvCatedras"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#333333"
+            android:textColor="#FFFFFF" />
+    </TableLayout>
+
+    <!-- Ajuste de visibilidad y posición del botón "Volver" -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:text="Volver"
+        android:backgroundTint="#BDBDBD"
+        android:textColor="#000000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        android:layout_marginTop="20dp" />
+
+</LinearLayout>

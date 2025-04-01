@@ -1,3 +1,29 @@
 <resources>
-    <string name="app_name">formularioCedulaJava</string>
+    <string name="app_name">FormularioDPJava</string>
+    <string name="tvTitleIngreso">Ingreso</string>
+    <string name="tvTitleContacto">Contacto</string>
+    <string name="tvTitleMain">Consulta general</string>
+    <string name="tvTitleConsultaId">Consulta ID</string>
+    <string name="tvTitleEliminarId">Eliminar ID</string>
+    <string name="tvTitleDE">Datos estudiante</string>
+    <string name="tvTitleDC">Datos Catedra</string>
+    <string name="tvTitleC">Datos de Contacto</string>
+    <string name="tvCedula">Cedula: </string>
+    <string name="tvNombre">Nombre: </string>
+    <string name="tvHorario">Horario: </string>
+    <string name="tvApellidos">Apellidos: </string>
+    <string name="tvEmail">Email: </string>
+    <string name="btnGuardar">Guardar</string>
+    <string name="btnMostrar">Mostrar</string>
+    <string name="btnVolver">Volver</string>
+    <string name="btnIngresar">Ingresar</string>
+    <string name="btnModificar">Modificar</string>
+    <string name="btnRetirar">Retirar</string>
+    <string name="btnEliminar">Eliminar</string>
+    <string name="btnActualizar">Actualizar</string>
+    <string name="btnConsultarId">Consultar ID</string>
+    <string name="btnContacto">Contacto</string>
+    <string name="btnConsultar">Consultar</string>
+
+
 </resources>

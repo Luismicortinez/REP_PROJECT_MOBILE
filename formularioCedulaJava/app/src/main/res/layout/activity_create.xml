@@ -2,9 +2,212 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="#222222"
+    android:padding="16dp"
     tools:context=".CreateActivity">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="INGRESO"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Datos Estudiante -->
+    <TextView
+        android:id="@+id/tvDatosEstudiante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos Estudiante"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Tabla Datos Estudiante -->
+    <TableLayout
+        android:id="@+id/tableDatosEstudiante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDatosEstudiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow>
+            <TextView
+                android:text="Nombres:"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="281dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Apellidos:"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/etApellidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Documento:"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/etCedula"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Correo:"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/etCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Botón Guardar Estudiante -->
+    <Button
+        android:id="@+id/btnGuardarEstudiante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:backgroundTint="#1E88E5"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tableDatosEstudiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Datos Cátedras -->
+    <TextView
+        android:id="@+id/tvDatosCatedras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos Cátedras"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGuardarEstudiante"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Tabla Datos Cátedras -->
+    <TableLayout
+        android:id="@+id/tableDatosCatedras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvDatosCatedras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:padding="8dp"
+                android:text="Nombres:"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/etNombreCatedra"
+                android:layout_width="293dp"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Horario:"
+                android:textColor="#FFFFFF"
+                android:padding="8dp"/>
+
+            <EditText
+                android:id="@+id/etHorario"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#FFFFFF"
+                android:padding="8dp"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Botón Guardar Cátedras -->
+    <Button
+        android:id="@+id/btnGuardarCatedras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar"
+        android:backgroundTint="#43A047"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@id/tableDatosCatedras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Botón Volver -->
+    <Button
+        android:id="@+id/btnVolver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"
+        android:backgroundTint="#757575"
+        android:textColor="#FFFFFF"
+        android:padding="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btnGuardarCatedras"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
