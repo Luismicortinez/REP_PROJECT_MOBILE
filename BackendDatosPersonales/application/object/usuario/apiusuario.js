@@ -15,13 +15,13 @@ var router = express.Router();
  *         description: List of ModelUsuario
  */
 router.get('/operaciongetusuario', async (req, res) => {
-	var idusuario = "1";
-	var documento = "717640";
-	var	nombres = "Carlos";
-	var apellidos = "Suaza";
-	var imagen = "";
+	// var idusuario = "1";
+	var explanation = "102ds5455";
+	var	title = "Luis Miguel";
+	// var apellidos = "Cortinez Rincon";
+	var url = "";
 	try {		
-        const modelusuario = new ModelUsuario(idusuario, documento, nombres, apellidos, imagen);
+        const modelusuario = new ModelUsuario(explanation, title, url);
         res.status(200).json(modelusuario);	
 
 	} catch (err) {
