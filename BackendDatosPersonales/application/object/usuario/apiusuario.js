@@ -70,7 +70,7 @@ router.get('/operaciongetusuariodocumento', async (req, res) => {
 				documento: "1037640956",
 				nombres: "Luis Miguel",
 				apellidos : "Cortinez",
-				imagen : "https://media-bog2-1.cdn.whatsapp.net/v/t61.24694-24/491867909_9138957122875872_5802305768111151358_n.jpg?ccb=11-4&oh=01_Q5Aa1gHrqZYH8ay_4lI4dadMsFHziT2Qbs7fUBIbbiBbYu6PNQ&oe=6830C946&_nc_sid=5e03e0&_nc_cat=106"
+				imagen : "https://media.licdn.com/dms/image/v2/D4E03AQHuIr8WIc2u3g/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1664919025590?e=2147483647&v=beta&t=XcnwtacQCCiLz_D6vUOVlDpiw6HoNQXnaENkqxzveDs"
 			});
 		}
 		else {

@@ -49,7 +49,7 @@ class _ConsultarDatosState extends State<ConsultarDatos> {
       isLoading = true;
     });
 
-    final url = 'http://192.168.202.130:8067/operaciongetusuariodocumento?documento=$documento&&nombre=$nombre'; // URL de la API remota
+    final url = 'http://localhost:8067/operaciongetusuariodocumento?documento=$documento&&nombre=$nombre'; // URL de la API remota
     try {
       final response = await http.get(Uri.parse(url));
 
